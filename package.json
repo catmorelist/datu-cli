@@ -1,12 +1,28 @@
 {
-  "name": "dg-cli",
-  "version": "0.1.2",
+  "name": "dagu-cli",
+  "version": "0.0.1",
   "description": "dg-cli 脚手架",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
+  "keywords": [
+    "Vite",
+    "Vue3",
+    "TypeScript",
+    "Element-plus"
+  ],
+  "author": "dagu",
+  "bin": {
+    "dagu": "bin/index.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "READEME.md"
+  ],
+  "license":"ISC",
   "dependencies": {
     "@inquirer/prompts": "^4.1.0",
     "@rollup/plugin-commonjs": "^25.0.7",
