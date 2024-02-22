@@ -20,10 +20,11 @@ const gitOptions:Partial<SimpleGitOptions>={
     maxConcurrentProcesses:6, // 最大并发进程数
 }
 
-// const goodPrinter = async () => {
-//     const data = await figlet('dugu-cli');
-//     console.log(chalk.rgb(40, 156, 193).visible(data));
-// };
+// 打印定义字体
+const goodPrinter = async () => {
+    const data = await figlet('dagu-cli');
+    console.log(chalk.rgb(40, 156, 193).visible(data));
+};
 
 
 export const clone =  async (url: string, projectName: string, options: string[])=>{
@@ -32,7 +33,7 @@ export const clone =  async (url: string, projectName: string, options: string[]
         await logger(git.clone(url,projectName,options),'代码下载中...',{
             estimate:7000 // 进度条估计时间
             }) 
-            // goodPrinter()
+            goodPrinter()
             console.log();
             console.log(chalk.blueBright(`==================================`));
             console.log(chalk.blueBright(`=== 欢迎使用 dagu-cli 脚手架 ===`));
